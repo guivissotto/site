@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Briefing de Branding — Vissotto Studio & Co</title>
+<link rel="icon" href="/favicon.svg">
+<link rel="stylesheet" href="/briefing/assets/briefing.css">
+</head>
+<body>
+
+<header class="bar">
+  <a href="/">VISSOTTO STUDIO &amp; CO</a>
+  <span>BRIEFING — BRANDING</span>
+  <div class="progress"><i id="progress"></i></div>
+</header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="kicker">Briefing · Identidade Visual</div>
+    <h1>Vamos construir<br>a sua marca ©</h1>
+    <p>Olá! Tudo bem? Reserve um tempo para responder as perguntas abaixo com calma e atenção. O briefing é um documento muito importante para o nosso processo de desenvolvimento e criação da sua Identidade Visual.</p>
+    <div class="meta"><span>7 etapas</span><span>~20 minutos</span><span>Suas respostas ficam salvas neste navegador enquanto você preenche</span></div>
+  </div>
+
+  <form id="briefing" name="briefing-branding" method="POST" data-netlify="true" netlify-honeypot="empresa_site" enctype="multipart/form-data" novalidate>
+    <input type="hidden" name="form-name" value="briefing-branding">
+    <p hidden><label>Não preencha: <input name="empresa_site"></label></p>
+    <input type="hidden" name="atributos">
+    <input type="hidden" name="atributos_mais_fortes">
+    <input type="hidden" name="pontos_de_contato">
+    <input type="file" name="pdf_do_briefing" hidden>
+
+    <!-- 01 -->
+    <section class="step" data-title="Sobre você">
+      <div class="step-head"><div class="num">01</div><h2>Sobre você</h2><p>Para sabermos com quem estamos falando.</p></div>
+      <div>
+        <div class="q" data-required>
+          <label class="title" for="nome">Qual o seu nome? <span class="req">*</span></label>
+          <input type="text" id="nome" name="nome" autocomplete="name">
+          <div class="err">Preencha o seu nome.</div>
+        </div>
+        <div class="grid2">
+          <div class="q" data-required data-type="email">
+            <label class="title" for="email">E-mail <span class="req">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email">
+            <div class="err">Informe um e-mail válido.</div>
+          </div>
+          <div class="q">
+            <label class="title" for="whatsapp">WhatsApp</label>
+            <input type="tel" id="whatsapp" name="whatsapp" autocomplete="tel" placeholder="(00) 00000-0000">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 -->
+    <section class="step" data-title="A marca">
+      <div class="step-head"><div class="num">02</div><h2>A marca</h2><p>O nome, a história e o que a sua empresa faz.</p></div>
+      <div>
+        <div class="q" data-required>
+          <label class="title" for="nome_marca">Qual nome será assinado na marca? <span class="req">*</span></label>
+          <span class="hint">Ex: "Coca-Cola"</span>
+          <input type="text" id="nome_marca" name="nome_da_marca">
+          <div class="err">Preencha o nome da marca.</div>
+        </div>
+        <div class="q">
+          <label class="title" for="subtitulo">Possui algum subtítulo ou slogan para ser inserido na marca?</label>
+          <span class="hint">Ex: Fotografia, Design, Arquitetura</span>
+          <input type="text" id="subtitulo" name="subtitulo_ou_slogan">
+        </div>
+        <div class="q">
+          <label class="title" for="sobre">Do que se trata a marca?</label>
+          <textarea id="sobre" name="do_que_se_trata" rows="3"></textarea>
+        </div>
+        <div class="q">
+          <label class="title" for="porque_nome">Por que a empresa tem esse nome? O que ele quer dizer?</label>
+          <textarea id="porque_nome" name="significado_do_nome" rows="2"></textarea>
+        </div>
+        <div class="q">
+          <label class="title" for="produtos">Descreva seus produtos / serviços como se eu fosse seu cliente</label>
+          <textarea id="produtos" name="produtos_servicos" rows="3"></textarea>
+        </div>
+        <div class="q">
+          <label class="title" for="tempo">Há quanto tempo essa marca está no mercado? E você, há quanto tempo trabalha na área?</label>
+          <textarea id="tempo" name="tempo_de_mercado" rows="2"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 -->
+    <section class="step" data-title="Mercado">
+      <div class="step-head"><div class="num">03</div><h2>Mercado</h2><p>Onde a sua marca está e contra quem ela disputa.</p></div>
+      <div>
+        <div class="q">
+          <label class="title" for="concorrentes">Quem são seus concorrentes? Existe algum concorrente que você mais admira? Se sim, qual e por quê?</label>
+          <textarea id="concorrentes" name="concorrentes" rows="3"></textarea>
+        </div>
+        <div class="q">
+          <label class="title" for="vantagem">Qual é a sua vantagem competitiva?</label>
+          <span class="hint">Por que seus consumidores escolhem (ou escolheriam) seu produto ou serviço? O que sua empresa faz melhor do que os concorrentes?</span>
+          <textarea id="vantagem" name="vantagem_competitiva" rows="3"></textarea>
+        </div>
+        <div class="q">
+          <label class="title" for="tendencias">Quais são as tendências e mudanças que afetam o seu mercado?</label>
+          <textarea id="tendencias" name="tendencias_do_mercado" rows="2"></textarea>
+        </div>
+        <div class="q">
+          <label class="title" for="sucesso">Como você mede o sucesso da sua empresa?</label>
+          <textarea id="sucesso" name="medida_de_sucesso" rows="2"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 -->
+    <section class="step" data-title="Público e posicionamento">
+      <div class="step-head"><div class="num">04</div><h2>Público e posicionamento</h2><p>Para quem a marca fala e como ela quer ser lembrada.</p></div>
+      <div>
+        <div class="q">
+          <label class="title" for="publico">Descreva da melhor maneira possível o seu público-alvo</label>
+          <span class="hint">Quem são eles? Classe social, gênero predominante, idade, hábitos...</span>
+          <textarea id="publico" name="publico_alvo" rows="3"></textarea>
+        </div>
+        <div class="q">
+          <label class="title" for="descricao_clientes">Como você gostaria que os clientes descrevessem sua empresa?</label>
+          <textarea id="descricao_clientes" name="como_quer_ser_descrita" rows="2"></textarea>
+        </div>
+        <div class="q">
+          <label class="title" for="palavras">Quais são as palavras-chave que melhor descrevem o conceito do seu negócio?</label>
+          <input type="text" id="palavras" name="palavras_chave">
+        </div>
+        <div class="q">
+          <label class="title" for="mensagem">Que mensagem sua marca deseja comunicar ao público?</label>
+          <textarea id="mensagem" name="mensagem_a_comunicar" rows="2"></textarea>
+        </div>
+        <div class="q">
+          <label class="title" for="evitar">Qual mensagem sua marca deseja evitar que seja percebida pelo público?</label>
+          <textarea id="evitar" name="mensagem_a_evitar" rows="2"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 -->
+    <section class="step" data-title="Objetivos e aplicações">
+      <div class="step-head"><div class="num">05</div><h2>Objetivos e aplicações</h2><p>O que você espera desta nova etapa e onde a marca vai viver.</p></div>
+      <div>
+        <div class="q">
+          <label class="title" for="importancia">Por que você acredita que uma identidade visual é importante para sua marca? O que pretende alcançar nesta nova etapa?</label>
+          <textarea id="importancia" name="por_que_identidade_visual" rows="3"></textarea>
+        </div>
+        <div class="q">
+          <label class="title" for="objetivos">Quais são seus três objetivos mais importantes?</label>
+          <textarea id="objetivos" name="tres_objetivos" rows="3" placeholder="1.&#10;2.&#10;3."></textarea>
+        </div>
+        <div class="q" data-collect="pontos_de_contato">
+          <span class="title">Onde o seu cliente vai ver mais o logotipo da sua empresa?</span>
+          <span class="hint">Marque quantos quiser.</span>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" value="Redes sociais"><span>Redes sociais</span></label>
+            <label class="chip"><input type="checkbox" value="Site"><span>Site</span></label>
+            <label class="chip"><input type="checkbox" value="Fachada"><span>Fachada</span></label>
+            <label class="chip"><input type="checkbox" value="Cartão de visita"><span>Cartão de visita</span></label>
+            <label class="chip"><input type="checkbox" value="Embalagem"><span>Embalagem</span></label>
+            <label class="chip"><input type="checkbox" value="Uniforme"><span>Uniforme</span></label>
+            <label class="chip"><input type="checkbox" value="Propagandas"><span>Propagandas</span></label>
+            <label class="chip"><input type="checkbox" value="Papelaria"><span>Papelaria</span></label>
+            <label class="chip"><input type="checkbox" value="Veículos"><span>Veículos</span></label>
+            <label class="chip"><input type="checkbox" value="Aplicativo"><span>Aplicativo</span></label>
+          </div>
+          <input type="text" name="pontos_de_contato_outros" placeholder="Outros? Escreva aqui" style="margin-top:14px">
+        </div>
+        <div class="q">
+          <label class="title" for="canais">Você já tem domínio de e-mail, site ou redes sociais cadastrados? Pode listar aqui?</label>
+          <textarea id="canais" name="dominio_site_redes" rows="2" placeholder="@instagram, site.com.br..."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 -->
+    <section class="step" data-title="Direção visual">
+      <div class="step-head"><div class="num">06</div><h2>Direção visual</h2><p>Cores, personalidade e referências.</p></div>
+      <div>
+        <div class="q">
+          <label class="title" for="cores">Tem preferência de cor e tom? As razões são pessoais ou estratégicas?</label>
+          <textarea id="cores" name="cores_preferidas" rows="2"></textarea>
+        </div>
+        <div class="q">
+          <label class="title" for="cores_evitar">Existe alguma cor que você não gostaria que estivesse na identidade? Por quê?</label>
+          <textarea id="cores_evitar" name="cores_a_evitar" rows="2"></textarea>
+        </div>
+        <div class="q" data-collect="atributos" id="q-atributos">
+          <span class="title">Escolha as melhores opções para a construção da nova marca</span>
+          <span class="hint">Marque quantas quiser.</span>
+          <div class="chips" id="atributos">
+            <label class="chip"><input type="checkbox" value="Moderna"><span>Moderna</span></label>
+            <label class="chip"><input type="checkbox" value="Vintage"><span>Vintage</span></label>
+            <label class="chip"><input type="checkbox" value="Séria"><span>Séria</span></label>
+            <label class="chip"><input type="checkbox" value="Popular"><span>Popular</span></label>
+            <label class="chip"><input type="checkbox" value="Forte"><span>Forte</span></label>
+            <label class="chip"><input type="checkbox" value="Sublime"><span>Sublime</span></label>
+            <label class="chip"><input type="checkbox" value="Tradicional"><span>Tradicional</span></label>
+            <label class="chip"><input type="checkbox" value="Engraçada"><span>Engraçada</span></label>
+            <label class="chip"><input type="checkbox" value="Orgânica"><span>Orgânica</span></label>
+            <label class="chip"><input type="checkbox" value="Digital"><span>Digital</span></label>
+            <label class="chip"><input type="checkbox" value="Minimalista"><span>Minimalista</span></label>
+            <label class="chip"><input type="checkbox" value="Detalhada"><span>Detalhada</span></label>
+            <label class="chip"><input type="checkbox" value="Discreta"><span>Discreta</span></label>
+            <label class="chip"><input type="checkbox" value="Extravagante"><span>Extravagante</span></label>
+            <label class="chip"><input type="checkbox" value="Formal"><span>Formal</span></label>
+            <label class="chip"><input type="checkbox" value="Despojada"><span>Despojada</span></label>
+            <label class="chip"><input type="checkbox" value="Pesada"><span>Pesada</span></label>
+            <label class="chip"><input type="checkbox" value="Leve"><span>Leve</span></label>
+          </div>
+        </div>
+        <div class="q" data-collect="atributos_mais_fortes" id="q-fortes">
+          <span class="title">Das palavras que você escolheu, quais são as 3 mais fortes?</span>
+          <span class="hint" id="fortes-hint">Escolha primeiro as palavras acima.</span>
+          <div class="chips" id="fortes"></div>
+          <div class="counter" id="fortes-count"></div>
+        </div>
+        <div class="q">
+          <label class="title" for="referencias">Que referências devem ser seguidas para a criação deste projeto?</label>
+          <span class="hint">Existe alguma característica visual ou elemento preferido? Conte como imagina a marca visualmente.</span>
+          <textarea id="referencias" name="referencias_visuais" rows="3"></textarea>
+        </div>
+        <div class="q">
+          <label class="title" for="logos">Liste logotipos de outras empresas que você gosta, de qualquer ramo, e o que chama sua atenção neles</label>
+          <textarea id="logos" name="logotipos_que_gosta" rows="3"></textarea>
+        </div>
+        <div class="q">
+          <span class="title">Envie imagens de referência</span>
+          <span class="hint">Fotos, artes, identidades e logotipos que você goste. Até 3 arquivos, somando no máximo 6 MB. Se tiver mais, pode mandar por WhatsApp ou e-mail.</span>
+          <div class="files">
+            <label class="file"><input type="file" name="referencia_1" accept="image/*,.pdf"><b>+ ARQUIVO 1</b><span class="name">Nenhum arquivo</span></label>
+            <label class="file"><input type="file" name="referencia_2" accept="image/*,.pdf"><b>+ ARQUIVO 2</b><span class="name">Nenhum arquivo</span></label>
+            <label class="file"><input type="file" name="referencia_3" accept="image/*,.pdf"><b>+ ARQUIVO 3</b><span class="name">Nenhum arquivo</span></label>
+          </div>
+          <div class="err" id="files-err">Os arquivos passam de 6 MB. Remova algum ou envie por WhatsApp.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 -->
+    <section class="step" data-title="Para fechar">
+      <div class="step-head"><div class="num">07</div><h2>Para fechar</h2><p>Últimos detalhes.</p></div>
+      <div>
+        <div class="q">
+          <label class="title" for="prazo">Existe algum prazo ou data importante para a marca ficar pronta?</label>
+          <span class="hint">Ex: inauguração, lançamento, evento.</span>
+          <input type="text" id="prazo" name="prazo">
+        </div>
+        <div class="q">
+          <label class="title" for="final">Além dessas perguntas, você possui alguma última informação importante?</label>
+          <textarea id="final" name="informacoes_finais" rows="3"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <div class="submit-area">
+      <div></div>
+      <div>
+        <button type="submit" class="btn" id="send">Enviar briefing →</button>
+        <p class="note">Ao enviar, o studio recebe suas respostas e você pode baixar uma cópia em PDF.</p>
+        <p class="form-error" id="form-error" hidden></p>
+      </div>
+    </div>
+  </form>
+
+  <div class="thanks">
+    <h1>OBRIGADO ©</h1>
+    <p>Recebemos o seu briefing. Vamos estudar tudo com calma e entramos em contato em breve com os próximos passos.</p>
+    <a class="btn ghost" id="download-pdf" download>Baixar minhas respostas em PDF ↓</a>
+  </div>
+
+</div>
+
+<footer class="foot"><span>VISSOTTO STUDIO &amp; CO ©</span><span>PETRÓPOLIS — RJ</span></footer>
+<div class="saved" id="saved">RASCUNHO SALVO</div>
+
+<script src="/briefing/assets/pdf.js"></script>
+<script src="/briefing/assets/briefing.js"></script>
+</body>
+</html>
