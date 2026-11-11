@@ -105,7 +105,8 @@
       q.classList.toggle("invalid", !ok);
       if (!ok && !first) first = q;
     });
-    if (filesTotal() > MAX_FILES) { var fq = document.getElementById("files-err").closest(".q"); fq.classList.add("invalid"); first = first || fq; }
+    var fe = document.getElementById("files-err");
+    if (fe && filesTotal() > MAX_FILES) { var fq = fe.closest(".q"); fq.classList.add("invalid"); first = first || fq; }
     if (first) { first.scrollIntoView({ behavior: "smooth", block: "center" }); var f = first.querySelector("input,textarea"); if (f) setTimeout(function () { f.focus({ preventScroll: true }); }, 400); }
     return !first;
   }
