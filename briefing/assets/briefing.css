@@ -1,117 +1,153 @@
+/* Briefing — segue o sistema do site vissottostudio.com
+   (mesmas variáveis, gutter, tipografia e blocos retos, sem cantos arredondados) */
 @font-face{font-family:PPMori;src:url(/assets/fonts/ppmori/PPMori-Regular.otf);font-weight:400}
 @font-face{font-family:PPMori;src:url(/assets/fonts/ppmori/PPMori-Medium.otf);font-weight:500}
 @font-face{font-family:PPMori;src:url(/assets/fonts/ppmori/PPMori-SemiBold.otf);font-weight:600}
 @font-face{font-family:PPMori;src:url(/assets/fonts/ppmori/PPMori-Bold.otf);font-weight:700}
 
-:root{--font:"PPMori",sans-serif;--bg:#fff;--text:#000;--gray:#808080;--lgray:#A4A4A4;--line:#E2E2E2;--gutter:30px;font-size:17px}
-@media (max-width:991px){:root{--gutter:20px;font-size:15px}}
+:root{--font:"PPMori",sans-serif;--background:#FFFFFF;--text:#000;--lgray:#A4A4A4;--gray:#808080;--gutter:30px;font-size:17px}
+@media (max-width:991px){:root{--gutter:20px;font-size:13px}}
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased}
+body,p,ul,li,h1,h2,h3{margin:0;padding:0}
+li{list-style:none}
 a{color:inherit;text-decoration:none}
-button,input,textarea,select{font-family:inherit;font-size:inherit;color:inherit}
+button,input,textarea{font-family:inherit;color:inherit;border-radius:0}
+body{background:var(--background);color:var(--text);font-family:var(--font);max-width:100vw;-webkit-font-smoothing:antialiased}
+body::-webkit-scrollbar{width:8px}
+body::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3)}
+body::-webkit-scrollbar-thumb{background-color:#a9a9a9}
 ::selection{background:#000;color:#fff}
 
-/* Barra superior, igual ao site */
-.bar{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:var(--gutter);
-  background:#000;color:#fff;font-size:12px;font-weight:700;letter-spacing:.01em;padding:18px var(--gutter);
-  margin:0 var(--gutter);border-radius:0 0 20px 20px}
-.bar span{color:var(--lgray)}
-.progress{position:absolute;left:var(--gutter);right:var(--gutter);bottom:0;height:2px;background:#333;border-radius:2px;overflow:hidden}
-.progress i{display:block;height:100%;width:0;background:#fff;transition:width .4s ease}
+.gutter{padding:0 var(--gutter)}
+.max-container{width:100%;max-width:1920px;margin:0 auto}
 
-/* Senha */
-.gate-main{padding:calc(var(--gutter)*2) calc(var(--gutter)*2);max-width:1100px}
-.gate h1{font-size:clamp(34px,6vw,72px);line-height:1;font-weight:700;margin:40px 0 60px}
-.gate-form label{display:block;color:var(--gray);font-weight:600;margin-bottom:14px}
-.gate-row{display:flex;gap:16px;align-items:flex-end;max-width:640px}
-.gate-row input{flex:1;border:0;border-bottom:2px solid #000;padding:10px 0;font-size:22px;outline:none;background:none}
-.gate-row button{background:#000;color:#fff;border:0;border-radius:40px;padding:14px 24px;font-weight:700;cursor:pointer;white-space:nowrap}
-.gate-error{color:#C8102E;font-weight:600;margin-top:16px}
+/* ---------- Header (idêntico ao site) ---------- */
+header.site{position:sticky;top:0;z-index:50}
+header.site>.content{position:relative;background:var(--text);color:var(--background);display:grid;grid-template-columns:1fr 1fr;align-items:center;line-height:1em;gap:var(--gutter);padding-top:27px;padding-bottom:26px}
+@media (max-width:991px){header.site>.content{padding-top:20px;padding-bottom:20px;grid-template-columns:1fr auto}}
+header.site .logo a{font-weight:700;padding:12px 0}
+header.site .right{text-align:right;white-space:nowrap}
+.progress{position:absolute;left:0;right:0;bottom:0;height:3px;background:#262626}
+.progress i{display:block;height:100%;width:0;background:var(--background);transition:width .4s ease}
 
-/* Formulário */
-.wrap{padding:0 calc(var(--gutter)*2);max-width:1400px;margin:0 auto}
-.hero{padding:70px 0 40px;border-bottom:1px solid var(--line)}
-.hero .kicker{color:var(--gray);font-weight:600;font-size:14px;margin-bottom:24px;text-transform:uppercase}
-.hero h1{font-size:clamp(38px,7vw,96px);line-height:.95;font-weight:700;margin:0 0 36px;text-transform:uppercase}
-.hero p{max-width:620px;font-size:18px;line-height:1.45;color:#222;margin:0}
-.hero .meta{display:flex;gap:28px;flex-wrap:wrap;margin-top:28px;font-size:13px;font-weight:600;color:var(--gray);text-transform:uppercase}
+/* ---------- Abertura (como "Everything is design") ---------- */
+section.insert1{padding-top:60px;padding-bottom:50px}
+@media (max-width:991px){section.insert1{padding-top:40px;padding-bottom:35px}}
+section.insert1 h1{font-weight:700;font-size:45px;line-height:54px}
+@media (max-width:991px){section.insert1 h1{font-size:30px;line-height:36px}}
 
-section.step{display:grid;grid-template-columns:minmax(200px,1fr) 2.2fr;gap:var(--gutter);padding:70px 0;border-bottom:1px solid var(--line)}
-@media (max-width:860px){section.step{grid-template-columns:1fr;padding:50px 0;gap:10px}}
-.step-head{position:sticky;top:90px;align-self:start}
-@media (max-width:860px){.step-head{position:static}}
-.step-head .num{font-size:clamp(48px,6vw,88px);font-weight:700;line-height:1}
-.step-head h2{font-size:15px;font-weight:700;text-transform:uppercase;margin:12px 0 0;letter-spacing:.01em}
-.step-head p{color:var(--gray);font-size:14px;line-height:1.4;margin:10px 0 0;max-width:240px}
+/* ---------- Blocos de duas colunas (como o infocard do site) ---------- */
+section.infocard{display:grid;grid-template-columns:1fr 1fr;gap:var(--gutter);border-top:2px solid var(--text)}
+@media (max-width:991px){section.infocard{display:block}}
+section.infocard .left{padding:var(--gutter);display:flex;flex-direction:column;gap:var(--gutter)}
+@media (max-width:991px){section.infocard .left{padding-bottom:0}}
+section.infocard .left .sticky{position:sticky;top:110px}
+@media (max-width:991px){section.infocard .left .sticky{position:static}}
+section.infocard .left h2{font-size:45px;font-weight:700;line-height:1.1}
+@media (max-width:991px){section.infocard .left h2{font-size:30px}}
+section.infocard .left .desc{color:var(--gray);margin-top:var(--gutter);max-width:340px;line-height:1.3}
+section.infocard .right{padding:var(--gutter);font-size:20px}
+@media (max-width:991px){section.infocard .right{font-size:17px}}
+section.infocard .right p.lead{padding-bottom:var(--gutter);line-height:1.3}
+section.infocard .right .middle{display:flex;align-items:center;justify-content:space-between;gap:var(--gutter);padding:calc(2*var(--gutter)) 0;border-top:2px solid var(--text);border-bottom:2px solid var(--text);font-weight:700}
+@media (max-width:991px){section.infocard .right .middle{flex-direction:column;align-items:flex-start;gap:8px;padding:var(--gutter) 0}}
+section.infocard .right .middle span:nth-child(1){margin-right:auto}
+.intro-card{margin-bottom:var(--gutter)}
 
-.q{margin-bottom:46px}
-.q:last-child{margin-bottom:0}
-.q label.title,.q .title{display:block;font-size:19px;font-weight:600;line-height:1.3;margin-bottom:6px}
-.q .hint{display:block;color:var(--gray);font-size:14px;line-height:1.4;margin-bottom:12px}
-.q .req{color:var(--gray);font-weight:500}
-.q input[type=text],.q input[type=email],.q input[type=tel],.q input[type=url],.q textarea{
-  width:100%;border:0;border-bottom:1.5px solid #000;background:transparent;padding:10px 0;font-size:18px;line-height:1.45;outline:none;border-radius:0;transition:border-color .2s}
-.q textarea{resize:vertical;min-height:52px;field-sizing:content}
-.q input:focus,.q textarea:focus{border-bottom-color:var(--gray)}
-.q input::placeholder,.q textarea::placeholder{color:#BDBDBD}
+/* ---------- Perguntas ---------- */
+.q{padding-bottom:calc(var(--gutter)*1.5)}
+.q:last-child{padding-bottom:0}
+.q .title{display:block;font-weight:600;line-height:1.25;margin-bottom:6px}
+.q .hint{display:block;color:var(--gray);font-size:17px;line-height:1.3;margin-bottom:10px}
+@media (max-width:991px){.q .hint{font-size:13px}}
+.q .req{color:var(--gray);font-weight:400}
+.q input[type=text],.q input[type=email],.q input[type=tel],.q textarea{
+  display:block;width:100%;border:0;border-bottom:2px solid var(--text);background:transparent;padding:10px 0;font-size:inherit;line-height:1.35;outline:none;transition:border-color .2s}
+.q textarea{resize:vertical;min-height:48px;field-sizing:content}
+.q input:focus,.q textarea:focus{border-bottom-color:var(--lgray)}
+.q input::placeholder,.q textarea::placeholder{color:#C4C4C4}
 .q.invalid input,.q.invalid textarea{border-bottom-color:#C8102E}
-.q .err{display:none;color:#C8102E;font-size:13px;font-weight:600;margin-top:8px}
+.q .err{display:none;color:#C8102E;font-size:15px;font-weight:600;margin-top:8px}
 .q.invalid .err{display:block}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 var(--gutter)}
 @media (max-width:640px){.grid2{grid-template-columns:1fr}}
+.q .other{margin-top:14px}
 
-/* Chips */
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+/* Opções (retas, como os filtros do site) */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
 .chip{position:relative}
 .chip input{position:absolute;opacity:0;pointer-events:none}
-.chip span{display:inline-block;border:1.5px solid #000;border-radius:40px;padding:10px 18px;font-size:14px;font-weight:600;text-transform:uppercase;cursor:pointer;user-select:none;transition:.15s}
-.chip span:hover{background:#F2F2F2}
-.chip input:checked+span{background:#000;color:#fff}
-.chip input:focus-visible+span{outline:2px solid #000;outline-offset:3px}
-.chip input:disabled+span{opacity:.3;cursor:not-allowed}
-.counter{font-size:13px;color:var(--gray);font-weight:600;margin-top:12px}
-
-/* Pares de atributos */
-.pairs{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;margin-top:10px}
-@media (max-width:640px){.pairs{grid-template-columns:1fr}}
+.chip span{display:inline-block;border:2px solid var(--text);padding:10px 14px;font-size:15px;font-weight:700;text-transform:uppercase;line-height:1;cursor:pointer;user-select:none;transition:background .15s,color .15s}
+@media (max-width:991px){.chip span{font-size:13px}}
+.chip span:hover{background:#F0F0F0}
+.chip input:checked+span{background:var(--text);color:var(--background)}
+.chip input:checked+span:before{content:"→ "}
+.chip input:focus-visible+span{outline:2px solid var(--text);outline-offset:3px}
+.chip input:disabled+span{opacity:.25;cursor:not-allowed}
+.counter{font-size:15px;color:var(--gray);font-weight:700;margin-top:12px}
 
 /* Upload */
-.files{display:grid;gap:10px;margin-top:8px}
-.file{display:flex;align-items:center;gap:14px;border:1.5px dashed #000;border-radius:16px;padding:16px 18px;cursor:pointer;font-weight:600;font-size:14px}
-.file:hover{background:#F7F7F7}
+.files{display:grid;gap:8px;margin-top:8px}
+.file{display:flex;align-items:center;justify-content:space-between;gap:var(--gutter);border:2px solid var(--text);padding:16px 18px;cursor:pointer;font-size:15px}
+.file:hover{background:#F0F0F0}
 .file input{display:none}
-.file .name{color:var(--gray);font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.file.has .name{color:#000}
+.file b{white-space:nowrap}
+.file .name{color:var(--gray);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:right}
+.file.has{background:var(--text);color:var(--background)}
+.file.has .name{color:var(--lgray)}
 
 /* Envio */
-.submit-area{padding:70px 0 120px;display:grid;grid-template-columns:minmax(200px,1fr) 2.2fr;gap:var(--gutter)}
-@media (max-width:860px){.submit-area{grid-template-columns:1fr}}
-.btn{display:inline-flex;align-items:center;gap:12px;background:#000;color:#fff;border:0;border-radius:60px;padding:22px 34px;font-weight:700;font-size:16px;cursor:pointer;text-transform:uppercase;transition:opacity .2s}
+.btn{display:flex;width:100%;align-items:center;justify-content:space-between;background:var(--text);color:var(--background);border:0;padding:calc(var(--gutter)*1.2) var(--gutter);font-weight:700;font-size:20px;text-transform:uppercase;cursor:pointer;text-align:left;transition:opacity .2s}
+@media (max-width:991px){.btn{font-size:17px}}
 .btn:hover{opacity:.85}
 .btn[disabled]{opacity:.5;cursor:wait}
-.btn.ghost{background:transparent;color:#000;border:1.5px solid #000}
-.note{color:var(--gray);font-size:14px;line-height:1.45;margin-top:18px;max-width:520px}
-.form-error{color:#C8102E;font-weight:600;margin-top:16px}
-.saved{position:fixed;right:var(--gutter);bottom:var(--gutter);background:#000;color:#fff;font-size:12px;font-weight:700;padding:10px 16px;border-radius:30px;opacity:0;transition:opacity .3s;pointer-events:none}
+.btn.ghost{background:transparent;color:var(--text);border:2px solid var(--text)}
+.note{color:var(--gray);font-size:17px;line-height:1.3;margin-top:18px}
+@media (max-width:991px){.note{font-size:13px}}
+.form-error{color:#C8102E;font-weight:600;margin-top:16px;font-size:17px}
+.saved{position:fixed;left:var(--gutter);bottom:var(--gutter);background:var(--text);color:var(--background);font-size:13px;font-weight:700;padding:12px 16px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:60}
 .saved.show{opacity:1}
 
 /* Obrigado */
-.thanks{display:none;padding:100px 0 140px}
-.thanks h1{font-size:clamp(44px,9vw,130px);line-height:.92;font-weight:700;margin:0 0 40px}
-.thanks p{font-size:18px;line-height:1.45;max-width:560px;margin:0 0 36px}
+.thanks{display:none}
 .done .thanks{display:block}
-.done form,.done .hero{display:none}
+.done #briefing,.done .intro{display:none}
 
-/* Índice */
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:var(--gutter);padding:50px 0 120px}
-@media (max-width:760px){.cards{grid-template-columns:1fr}}
-.card{display:flex;flex-direction:column;justify-content:space-between;min-height:340px;background:#000;color:#fff;border-radius:20px;padding:var(--gutter);transition:transform .25s}
-.card:hover{transform:translateY(-4px)}
-.card .n{font-size:14px;font-weight:700;color:var(--lgray)}
-.card h2{font-size:clamp(40px,5vw,72px);font-weight:700;margin:0;line-height:1}
-.card p{color:var(--lgray);margin:12px 0 0;font-size:15px;line-height:1.4}
-.card.soon{background:#F2F2F2;color:#000;pointer-events:none}
-.card.soon .n,.card.soon p{color:var(--gray)}
+/* Índice (como a grade de projetos do site) */
+.featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--gutter);margin-bottom:var(--gutter)}
+@media (max-width:991px){.featured-grid{display:block}.featured-grid li+li{margin-top:var(--gutter)}}
+.featured-grid .thumb{aspect-ratio:915/514;background:var(--text);color:var(--background);display:flex;align-items:flex-end;padding:var(--gutter);transition:opacity .2s}
+.featured-grid .thumb h2{font-size:45px;font-weight:700;line-height:1}
+@media (max-width:991px){.featured-grid .thumb h2{font-size:30px}}
+.featured-grid a:hover .thumb{opacity:.9}
+.featured-grid .soon .thumb{background:#EDEDED;color:var(--lgray)}
+.featured-grid .bottom{padding:var(--gutter);display:flex;justify-content:space-between}
+.featured-grid .bottom b{font-weight:700}
+.featured-grid .soon{pointer-events:none}
 
-footer.foot{display:flex;justify-content:space-between;gap:var(--gutter);padding:24px calc(var(--gutter)*2) 40px;font-size:12px;font-weight:700;color:var(--gray);border-top:1px solid var(--line)}
+/* Senha */
+.gate-form{max-width:640px}
+.gate-form label{display:block;color:var(--gray);margin-bottom:12px}
+.gate-row{display:flex;gap:var(--gutter);align-items:stretch}
+.gate-row input{flex:1;border:0;border-bottom:2px solid var(--text);padding:10px 0;font-size:20px;outline:none;background:none}
+.gate-row button{background:var(--text);color:var(--background);border:0;padding:0 var(--gutter);font-weight:700;font-size:17px;cursor:pointer;white-space:nowrap}
+.gate-error{color:#C8102E;font-weight:600;margin-top:16px}
+
+/* ---------- Footer (idêntico ao site) ---------- */
+footer.site{margin-bottom:var(--gutter);margin-top:var(--gutter)}
+footer.site .wrap{background:var(--text);color:var(--background);padding:var(--gutter)}
+footer.site .top{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--gutter);margin-bottom:120px}
+@media (max-width:991px){footer.site .top{margin-bottom:75px;flex-direction:column}}
+footer.site .contato{display:flex;gap:calc(var(--gutter)*2);line-height:1.2em}
+@media (max-width:991px){footer.site .contato{flex-direction:column;line-height:1.5em}}
+footer.site .contato h2{font-size:1rem;font-weight:400;color:var(--gray)}
+footer.site .contato p{display:flex;gap:var(--gutter);flex-wrap:wrap}
+footer.site .bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--gutter)}
+@media (max-width:991px){footer.site .bottom{display:block}footer.site .bottom .location{margin-bottom:37px}}
+footer.site .bottom .location p.place{margin-top:60px;color:var(--gray)}
+@media (max-width:991px){footer.site .bottom .location p.place{margin-top:20px}}
+footer.site .bottom .copy{text-align:right}
+@media (max-width:991px){footer.site .bottom .copy{text-align:left}}
+footer.site .bottom .copy span{color:var(--gray)}

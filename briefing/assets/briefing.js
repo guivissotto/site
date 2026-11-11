@@ -138,7 +138,7 @@
       return { title: s.dataset.title, items: items };
     });
     var blob = window.buildBriefingPDF({
-      label: document.querySelector(".bar span").textContent,
+      label: document.querySelector("header.site .right").textContent,
       title: marca,
       subtitle: "Briefing respondido por " + nome + " em " + data,
       footer: "Vissotto Studio & Co · vissottostudio.com",
@@ -169,7 +169,7 @@
     // remove arquivos vazios
     ["referencia_1", "referencia_2", "referencia_3"].forEach(function (n) { var f = fd.get(n); if (f && !f.size) fd.delete(n); });
 
-    btn.disabled = true; btn.textContent = "Enviando...";
+    btn.disabled = true; btn.firstElementChild.textContent = "ENVIANDO...";
     fetch("/", { method: "POST", body: fd })
       .then(function (r) {
         if (!r.ok) throw new Error("HTTP " + r.status);
@@ -184,7 +184,7 @@
         errEl.textContent = "Não conseguimos enviar agora. Suas respostas estão salvas: verifique sua conexão e tente de novo. Se persistir, fale com a gente em hello@vissottostudio.com.";
         errEl.hidden = false;
       })
-      .finally(function () { btn.disabled = false; btn.textContent = "Enviar briefing →"; });
+      .finally(function () { btn.disabled = false; btn.firstElementChild.textContent = "ENVIAR BRIEFING"; });
   });
 
   restore(); renderFortes(); progress();

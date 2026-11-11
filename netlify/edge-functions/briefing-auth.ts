@@ -27,19 +27,29 @@ function page(error = false, next = "/briefing/"): Response {
 <title>Briefing — Vissotto Studio & Co</title>
 <link rel="icon" href="/favicon.svg">
 <link rel="stylesheet" href="/briefing/assets/briefing.css">
-</head><body class="gate">
-<header class="bar"><a href="/">VISSOTTO STUDIO &amp; CO</a><span>ÁREA DO CLIENTE</span></header>
-<main class="gate-main">
-  <h1>BRIEFING<br>COM ACESSO<br>RESTRITO ©</h1>
-  <form method="POST" class="gate-form">
-    <input type="hidden" name="next" value="${next.replace(/"/g, "")}">
-    <label for="pw">Digite a senha que você recebeu do studio</label>
-    <div class="gate-row">
-      <input id="pw" name="password" type="password" autocomplete="current-password" autofocus required>
-      <button type="submit">ENTRAR →</button>
+</head><body>
+<header class="site gutter max-container">
+  <div class="content gutter">
+    <div class="logo"><a href="/">VISSOTTO STUDIO &amp; CO</a></div>
+    <div class="right">ÁREA DO CLIENTE</div>
+  </div>
+</header>
+<main class="gutter max-container">
+  <section class="insert1 gutter"><h1>BRIEFING<br>COM ACESSO RESTRITO</h1></section>
+  <section class="infocard">
+    <div class="left"><h2>SENHA</h2></div>
+    <div class="right">
+      <form method="POST" class="gate-form">
+        <input type="hidden" name="next" value="${next.replace(/"/g, "")}">
+        <label for="pw">Digite a senha que você recebeu do studio.</label>
+        <div class="gate-row">
+          <input id="pw" name="password" type="password" autocomplete="current-password" autofocus required>
+          <button type="submit">ENTRAR →</button>
+        </div>
+        ${error ? '<p class="gate-error">Senha incorreta. Tente novamente.</p>' : ""}
+      </form>
     </div>
-    ${error ? '<p class="gate-error">Senha incorreta. Tente novamente.</p>' : ""}
-  </form>
+  </section>
 </main>
 </body></html>`;
   return new Response(html, {

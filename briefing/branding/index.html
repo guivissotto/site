@@ -10,19 +10,27 @@
 </head>
 <body>
 
-<header class="bar">
-  <a href="/">VISSOTTO STUDIO &amp; CO</a>
-  <span>BRIEFING — BRANDING</span>
-  <div class="progress"><i id="progress"></i></div>
+<header class="site gutter max-container">
+  <div class="content gutter">
+    <div class="logo"><a href="/">VISSOTTO STUDIO &amp; CO</a></div>
+    <div class="right">BRIEFING — BRANDING</div>
+    <div class="progress"><i id="progress"></i></div>
+  </div>
 </header>
 
-<div class="wrap">
+<main class="gutter max-container">
 
-  <div class="hero">
-    <div class="kicker">Briefing · Identidade Visual</div>
-    <h1>Vamos construir<br>a sua marca ©</h1>
-    <p>Olá! Tudo bem? Reserve um tempo para responder as perguntas abaixo com calma e atenção. O briefing é um documento muito importante para o nosso processo de desenvolvimento e criação da sua Identidade Visual.</p>
-    <div class="meta"><span>7 etapas</span><span>~20 minutos</span><span>Suas respostas ficam salvas neste navegador enquanto você preenche</span></div>
+  <div class="intro">
+  <section class="insert1 gutter">
+    <h1>VAMOS CONSTRUIR<br>A SUA MARCA</h1>
+  </section>
+  <section class="infocard intro-card">
+    <div class="left"><h2>BRIEFING<br>DE BRANDING</h2></div>
+    <div class="right">
+      <p class="lead">Olá! Tudo bem? Reserve um tempo para responder as perguntas abaixo com calma e atenção. O briefing é um documento muito importante para o nosso processo de desenvolvimento e criação da sua Identidade Visual.</p>
+      <div class="middle"><span>7 ETAPAS</span><span>~20 MINUTOS</span><span>RASCUNHO AUTOMÁTICO</span></div>
+    </div>
+  </section>
   </div>
 
   <form id="briefing" name="briefing-branding" method="POST" data-netlify="true" netlify-honeypot="empresa_site" enctype="multipart/form-data" novalidate>
@@ -34,9 +42,9 @@
     <input type="file" name="pdf_do_briefing" hidden>
 
     <!-- 01 -->
-    <section class="step" data-title="Sobre você">
-      <div class="step-head"><div class="num">01</div><h2>Sobre você</h2><p>Para sabermos com quem estamos falando.</p></div>
-      <div>
+    <section class="step infocard" data-title="Sobre você">
+      <div class="left"><div class="sticky"><h2>01<br>SOBRE VOCÊ</h2><p class="desc">Para sabermos com quem estamos falando.</p></div></div>
+      <div class="right">
         <div class="q" data-required>
           <label class="title" for="nome">Qual o seu nome? <span class="req">*</span></label>
           <input type="text" id="nome" name="nome" autocomplete="name">
@@ -57,9 +65,9 @@
     </section>
 
     <!-- 02 -->
-    <section class="step" data-title="A marca">
-      <div class="step-head"><div class="num">02</div><h2>A marca</h2><p>O nome, a história e o que a sua empresa faz.</p></div>
-      <div>
+    <section class="step infocard" data-title="A marca">
+      <div class="left"><div class="sticky"><h2>02<br>A MARCA</h2><p class="desc">O nome, a história e o que a sua empresa faz.</p></div></div>
+      <div class="right">
         <div class="q" data-required>
           <label class="title" for="nome_marca">Qual nome será assinado na marca? <span class="req">*</span></label>
           <span class="hint">Ex: "Coca-Cola"</span>
@@ -91,9 +99,9 @@
     </section>
 
     <!-- 03 -->
-    <section class="step" data-title="Mercado">
-      <div class="step-head"><div class="num">03</div><h2>Mercado</h2><p>Onde a sua marca está e contra quem ela disputa.</p></div>
-      <div>
+    <section class="step infocard" data-title="Mercado">
+      <div class="left"><div class="sticky"><h2>03<br>MERCADO</h2><p class="desc">Onde a sua marca está e contra quem ela disputa.</p></div></div>
+      <div class="right">
         <div class="q">
           <label class="title" for="concorrentes">Quem são seus concorrentes? Existe algum concorrente que você mais admira? Se sim, qual e por quê?</label>
           <textarea id="concorrentes" name="concorrentes" rows="3"></textarea>
@@ -115,9 +123,9 @@
     </section>
 
     <!-- 04 -->
-    <section class="step" data-title="Público e posicionamento">
-      <div class="step-head"><div class="num">04</div><h2>Público e posicionamento</h2><p>Para quem a marca fala e como ela quer ser lembrada.</p></div>
-      <div>
+    <section class="step infocard" data-title="Público e posicionamento">
+      <div class="left"><div class="sticky"><h2>04<br>PÚBLICO E POSICIONAMENTO</h2><p class="desc">Para quem a marca fala e como ela quer ser lembrada.</p></div></div>
+      <div class="right">
         <div class="q">
           <label class="title" for="publico">Descreva da melhor maneira possível o seu público-alvo</label>
           <span class="hint">Quem são eles? Classe social, gênero predominante, idade, hábitos...</span>
@@ -143,9 +151,9 @@
     </section>
 
     <!-- 05 -->
-    <section class="step" data-title="Objetivos e aplicações">
-      <div class="step-head"><div class="num">05</div><h2>Objetivos e aplicações</h2><p>O que você espera desta nova etapa e onde a marca vai viver.</p></div>
-      <div>
+    <section class="step infocard" data-title="Objetivos e aplicações">
+      <div class="left"><div class="sticky"><h2>05<br>OBJETIVOS E APLICAÇÕES</h2><p class="desc">O que você espera desta nova etapa e onde a marca vai viver.</p></div></div>
+      <div class="right">
         <div class="q">
           <label class="title" for="importancia">Por que você acredita que uma identidade visual é importante para sua marca? O que pretende alcançar nesta nova etapa?</label>
           <textarea id="importancia" name="por_que_identidade_visual" rows="3"></textarea>
@@ -169,7 +177,7 @@
             <label class="chip"><input type="checkbox" value="Veículos"><span>Veículos</span></label>
             <label class="chip"><input type="checkbox" value="Aplicativo"><span>Aplicativo</span></label>
           </div>
-          <input type="text" name="pontos_de_contato_outros" placeholder="Outros? Escreva aqui" style="margin-top:14px">
+          <input type="text" name="pontos_de_contato_outros" placeholder="Outros? Escreva aqui" class="other">
         </div>
         <div class="q">
           <label class="title" for="canais">Você já tem domínio de e-mail, site ou redes sociais cadastrados? Pode listar aqui?</label>
@@ -179,9 +187,9 @@
     </section>
 
     <!-- 06 -->
-    <section class="step" data-title="Direção visual">
-      <div class="step-head"><div class="num">06</div><h2>Direção visual</h2><p>Cores, personalidade e referências.</p></div>
-      <div>
+    <section class="step infocard" data-title="Direção visual">
+      <div class="left"><div class="sticky"><h2>06<br>DIREÇÃO VISUAL</h2><p class="desc">Cores, personalidade e referências.</p></div></div>
+      <div class="right">
         <div class="q">
           <label class="title" for="cores">Tem preferência de cor e tom? As razões são pessoais ou estratégicas?</label>
           <textarea id="cores" name="cores_preferidas" rows="2"></textarea>
@@ -243,9 +251,9 @@
     </section>
 
     <!-- 07 -->
-    <section class="step" data-title="Para fechar">
-      <div class="step-head"><div class="num">07</div><h2>Para fechar</h2><p>Últimos detalhes.</p></div>
-      <div>
+    <section class="step infocard" data-title="Para fechar">
+      <div class="left"><div class="sticky"><h2>07<br>PARA FECHAR</h2><p class="desc">Últimos detalhes.</p></div></div>
+      <div class="right">
         <div class="q">
           <label class="title" for="prazo">Existe algum prazo ou data importante para a marca ficar pronta?</label>
           <span class="hint">Ex: inauguração, lançamento, evento.</span>
@@ -258,25 +266,44 @@
       </div>
     </section>
 
-    <div class="submit-area">
-      <div></div>
-      <div>
-        <button type="submit" class="btn" id="send">Enviar briefing →</button>
+    <section class="infocard">
+      <div class="left"><div class="sticky"><h2>ENVIAR</h2><p class="desc">Revise suas respostas antes de enviar.</p></div></div>
+      <div class="right">
+        <button type="submit" class="btn" id="send"><span>ENVIAR BRIEFING</span><span>→</span></button>
         <p class="note">Ao enviar, o studio recebe suas respostas e você pode baixar uma cópia em PDF.</p>
         <p class="form-error" id="form-error" hidden></p>
       </div>
-    </div>
+    </section>
   </form>
 
   <div class="thanks">
-    <h1>OBRIGADO ©</h1>
-    <p>Recebemos o seu briefing. Vamos estudar tudo com calma e entramos em contato em breve com os próximos passos.</p>
-    <a class="btn ghost" id="download-pdf" download>Baixar minhas respostas em PDF ↓</a>
+    <section class="insert1 gutter"><h1>OBRIGADO!</h1></section>
+    <section class="infocard">
+      <div class="left"><h2>BRIEFING<br>RECEBIDO</h2></div>
+      <div class="right">
+        <p class="lead">Recebemos o seu briefing. Vamos estudar tudo com calma e entramos em contato em breve com os próximos passos.</p>
+        <a class="btn ghost" id="download-pdf" download><span>BAIXAR MINHAS RESPOSTAS EM PDF</span><span>↓</span></a>
+      </div>
+    </section>
   </div>
 
-</div>
+</main>
 
-<footer class="foot"><span>VISSOTTO STUDIO &amp; CO ©</span><span>PETRÓPOLIS — RJ</span></footer>
+<footer class="site gutter max-container">
+  <div class="wrap">
+    <div class="top">
+      <div class="contato">
+        <div><h2>FALE CONOSCO</h2><p><a href="mailto:hello@vissottostudio.com">HELLO@VISSOTTOSTUDIO.COM</a></p></div>
+        <div><h2>SOCIAL</h2><p><a href="https://www.instagram.com/vissotto" target="_blank" rel="noopener">INSTAGRAM</a> <a href="https://www.behance.net/vissotto" target="_blank" rel="noopener">BEHANCE</a> <a href="https://www.linkedin.com/in/guivissotto/" target="_blank" rel="noopener">LINKEDIN</a></p></div>
+      </div>
+      <p>WORLDWIDE BRAND<br>DESIGN STUDIO</p>
+    </div>
+    <div class="bottom">
+      <div class="location"><p class="place">PETRÓPOLIS, RIO DE JANEIRO - BRASIL</p></div>
+      <div class="copy"><p>VISSOTTO STUDIO &amp; CO<br>- <br><span>EVERYTHING IS DESIGN, WE DESIGN EVERYTHING<br>ALL RIGHTS RESERVED</span></p></div>
+    </div>
+  </div>
+</footer>
 <div class="saved" id="saved">RASCUNHO SALVO</div>
 
 <script src="/briefing/assets/pdf.js"></script>
