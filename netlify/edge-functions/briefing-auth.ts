@@ -35,20 +35,18 @@ function page(error = false, next = "/briefing/"): Response {
   </div>
 </header>
 <main class="gutter max-container">
-  <section class="insert1 gutter"><h1>BRIEFING<br>COM ACESSO RESTRITO</h1></section>
-  <section class="infocard">
-    <div class="left"><h2>SENHA</h2></div>
-    <div class="right">
-      <form method="POST" class="gate-form">
-        <input type="hidden" name="next" value="${next.replace(/"/g, "")}">
-        <label for="pw">Digite a senha que você recebeu do studio.</label>
-        <div class="gate-row">
-          <input id="pw" name="password" type="password" autocomplete="current-password" autofocus required>
-          <button type="submit">ENTRAR →</button>
-        </div>
-        ${error ? '<p class="gate-error">Senha incorreta. Tente novamente.</p>' : ""}
-      </form>
-    </div>
+  <section class="hero gate">
+    <div class="kicker">Área do cliente</div>
+    <h1>Briefing com<br>acesso restrito</h1>
+    <form method="POST" class="gate-form">
+      <input type="hidden" name="next" value="${next.replace(/"/g, "")}">
+      <label for="pw">Digite a senha que você recebeu do studio.</label>
+      <div class="gate-row">
+        <input id="pw" name="password" type="password" autocomplete="current-password" autofocus required>
+        <button type="submit">ENTRAR →</button>
+      </div>
+      ${error ? '<p class="gate-error">Senha incorreta. Tente novamente.</p>' : ""}
+    </form>
   </section>
 </main>
 </body></html>`;
